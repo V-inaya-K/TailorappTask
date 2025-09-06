@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1054135743627",
+    "project_id": "interntask-190da",
+    "storage_bucket": "interntask-190da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054135743627:android:6c2de5e36beb9eb68dd08e",
+        "android_client_info": {
+          "package_name": "com.example.tailorapptask"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATB4IgUXnJ3J0tgOxMXEWV-x3e4agQoUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
