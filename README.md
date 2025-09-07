@@ -1,16 +1,32 @@
-# tailorapptask
+# 🍦 Skeduler - The Todo APP
 
-A new Flutter project.
+![Animated GIF](https://i.gifer.com/J4o.gif)
 
-## Getting Started
+## 🛠️ Features  
+1.	Google Sign-In (Supabase Auth)
+•	Users can login with Google account.
+•	Shows user profile picture and name upon login.
+•	Todo List (Supabase Database)
 
-This project is a starting point for a Flutter application.
+2.	CRUD functionality (Create, Read, Update, Delete).
+•	Each todo item has a title and deadline.
+•	Todos are stored and synced in Supabase.
 
-A few resources to get you started if this is your first Flutter project:
+3.	Push Notifications (Firebase FCM)
+•	Local + cloud notifications implemented.
+•	Users get a notification precisely 1 hour before a todo's deadline.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🔧 Tech Stack  
+The project is built using the following technologies:  
+
+- **Flutter** (for cross-platform development)  
+- **Dart** (programming language)  
+- **FCM** (Push Notifications)  
+- **Supabase** (Authentication + Bakend)
+
+![Animated GIF](https://media1.giphy.com/media/l3mZnuz4coJp8EBBm/giphy.gif)
+
+
