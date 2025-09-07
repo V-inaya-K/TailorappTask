@@ -5,12 +5,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-/// Top-level background handler required by Firebase Messaging
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // initialize Firebase in background isolate
   await Firebase.initializeApp();
-  // You can handle background messages here if needed
-  // (system will show notifications if payload contains "notification")
 }
 
 class NotificationService {
@@ -18,10 +14,7 @@ class NotificationService {
   static final FlutterLocalNotificationsPlugin _local = FlutterLocalNotificationsPlugin();
 
   static Future<void> init() async {
-    // ask permission (iOS)
     await _fcm.requestPermission(alert: true, badge: true, sound: true);
-
-    // init local notifications (foreground)
     const androidInit = AndroidInitializationSettings('@mipmap/ic_launcher');
     const iosInit = DarwinInitializationSettings();
     await _local.initialize(const InitializationSettings(android: androidInit, iOS: iosInit));
@@ -54,8 +47,6 @@ class NotificationService {
         });
       }
     });
-
-    // initial token upsert (if user already logged in)
     final token = await _fcm.getToken();
     final client = Supabase.instance.client;
     final user = client.auth.currentUser;

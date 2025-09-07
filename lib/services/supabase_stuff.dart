@@ -3,15 +3,11 @@ import 'package:tailorapptask/services/notification_feature.dart';
 
 class SB {
   static final client = Supabase.instance.client;
-
-  /// Sign in with Google (opens browser / native flow)
   static Future<void> signInWithGoogle() async {
     await client.auth.signInWithOAuth(
       OAuthProvider.google,
       redirectTo: 'io.supabase.flutter://login-callback/',
     );
-    // After auth flow completes, Supabase will have the session
-    // We'll upsert the profile in the app code (see main Gate)
   }
 
   static Future<void> upsertProfile({required String userId, String? name, String? avatarUrl, String? fcmToken}) async {
